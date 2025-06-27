@@ -48,19 +48,39 @@ This is a cloud-based **smart expense tracker** that uses OCR and AI to scan rec
 
 ## 📁 Folder Structure
 receipt-dashboard/
-├── backend/ # Express backend for Cloud Run
+├── backend/                          # Cloud Run Express backend
+│   ├── index.js                      # Main Express app logic (APIs, uploads)
+│   ├── package.json                  # Backend dependencies
+│   ├── .env                          # (Optional) API keys, config variables
+│   └── README.md                     # Backend instructions (optional)
 
-│ └── index.js # Handles receipt upload, data APIs
+├── cloud-function/                   # Cloud Function triggered on receipt upload
+│   ├── index.js                      # GCS trigger → Document AI → Firestore
+│   ├── package.json                  # Cloud Function dependencies
+│   └── .gcloudignore                 # Files to ignore during deploy
 
-├── cloud-function/ # Cloud Function to process GCS triggers
-│ └── index.js # Invokes Document AI and saves to Firestore
+├── src/                              # React Frontend (Vite + Tailwind)
+│   ├── components/                   # Reusable UI components
+│   │   ├── Login.jsx                 # Login component
+│   │   ├── Dashboard.jsx             # Displays expenses
+│   │   ├── UploadReceipt.jsx         # Upload interface
+│   │   └── ChartAnalytics.jsx        # (Optional) Charts for analytics
+│   ├── firebase.js                   # Firebase config (auth + firestore)
+│   ├── App.jsx                       # Main app
+│   ├── main.jsx                      # ReactDOM render
+│   ├── routes.jsx                    # Routing configuration
+│   └── index.css                     # Tailwind global styles
 
-├── src/ # React frontend
-│ ├── components/ # Auth, Dashboard, Upload components
-│ └── firebase.js # Firebase config
+├── public/                           # Public assets
+│   └── index.html                    # HTML template
 
-├── public/
-└── README.md
+├── .gitignore                        # Git ignore file
+├── README.md                         # ✅ Main README (this file)
+├── vite.config.js                    # Vite configuration
+├── tailwind.config.js               # Tailwind setup
+├── package.json                      # React app dependencies
+└── yarn.lock / package-lock.json     # Dependency lock file
+
 
 
 ---
