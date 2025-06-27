@@ -49,12 +49,16 @@ This is a cloud-based **smart expense tracker** that uses OCR and AI to scan rec
 ## 📁 Folder Structure
 receipt-dashboard/
 ├── backend/ # Express backend for Cloud Run
+
 │ └── index.js # Handles receipt upload, data APIs
+
 ├── cloud-function/ # Cloud Function to process GCS triggers
 │ └── index.js # Invokes Document AI and saves to Firestore
+
 ├── src/ # React frontend
 │ ├── components/ # Auth, Dashboard, Upload components
 │ └── firebase.js # Firebase config
+
 ├── public/
 └── README.md
 
