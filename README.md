@@ -35,7 +35,7 @@ This is a cloud-based **smart expense tracker** that uses OCR and AI to scan rec
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** React + Vite + Tailwind CSS
+- **Frontend:** React
 - **Backend:** Node.js + Express
 - **Cloud Deployment:** Google Cloud Run
 - **OCR & Parsing:** Document AI (pre-trained receipt model)
@@ -76,8 +76,6 @@ receipt-dashboard/
 
 ├── .gitignore                        # Git ignore file
 ├── README.md                         # ✅ Main README (this file)
-├── vite.config.js                    # Vite configuration
-├── tailwind.config.js               # Tailwind setup
 ├── package.json                      # React app dependencies
 └── yarn.lock / package-lock.json     # Dependency lock file
 
